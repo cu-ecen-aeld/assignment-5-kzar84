@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESDSOCKET_VERSION = '43ab714251e74cf27949ce36f57b0518213348f8'
+AESDSOCKET_VERSION = '0553f220507cb7978c6d971fbeabafc4d9caaa2a'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -21,7 +21,7 @@ endef
 # Add aesdsocket and start-stop script
 define AESDSOCKET_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 755 $(@D)/server/aesdsocket $(TARGET_DIR)/usr/bin/
-	$(INSTALL) -m 755 $(@D)/server/aesdsocket-start-stop $(TARGET_DIR)/etc/init.d/s99aesdsocket
+	$(INSTALL) -m 755 $(@D)/server/aesdsocket-start-stop $(TARGET_DIR)/etc/init.d/S99aesdsocket
 endef
 
 $(eval $(generic-package))
